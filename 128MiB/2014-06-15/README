@@ -1,0 +1,26 @@
+U-Boot compile guide
+Step1:
+	Copy u-boot-1.3.3-lpc32xx.spec.in to ./dist/lfs-5.1/u-boot/
+	Copy u-boot-1.3.3-1402837154.patch to ./rpm/SOURCES/
+	
+Step2:
+	./ltib -m prep -p u-boot
+	./ltib -m scbuild -p u-boot
+	
+Linux compile guide
+Step1:
+	Copy kernel-2.6.27.8-lpc32xx.spec.in to ./dist/lfs-5.1/kernel/
+	Copy kernel-2.6.27.8-1402840917.patch to ./rpm/SOURCES/
+	
+Step2:
+	./ltib -m prep -p kernel
+	./ltib -m scbuild -p kernel
+	
+Rootfs config guide
+Step1:
+	./ltib -m config
+		--Target Image Generation
+			Options --->
+				(128) jffs2 erase block size in KB
+Step2:
+	./ltib

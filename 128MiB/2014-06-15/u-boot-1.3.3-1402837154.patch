@@ -1,0 +1,14 @@
+diff --exclude CVS --exclude .git -uNr u-boot-1.3.3/include/configs/phy3250.h u-boot-1.3.3.modified/include/configs/phy3250.h
+--- u-boot-1.3.3/include/configs/phy3250.h	2014-06-15 08:59:36.000000000 -0400
++++ u-boot-1.3.3.modified/include/configs/phy3250.h	2014-06-15 08:55:40.000000000 -0400
+@@ -180,8 +180,8 @@
+  * Address and size of Environment Data
+  */
+ #define CFG_ENV_ADDR		0x80000100 /* Passed to kernel here */
+-#define CFG_ENV_SIZE		0x4000 /* 1 block */
+-#define CFG_ENV_OFFSET		0x168000 /* Block 90 */
++#define CFG_ENV_SIZE		0x20000 /* 1 block */
++#define CFG_ENV_OFFSET		0xb40000 /* Block 90 */
+ 
+ /*
+  * Various network related parameters
